@@ -10,7 +10,7 @@
             "args": ["run", "${file}"],
             "presentation": {
                 "echo": true,
-                "reveal": "silent",
+                "reveal": "always",
                 "panel": "shared",
                 "showReuseMessage": true,
                 "clear": true
