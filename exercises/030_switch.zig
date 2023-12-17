@@ -48,7 +48,7 @@ pub fn main() void {
             // not one of the existing matches.
             else => {
                 std.debug.print("?", .{});
-            }
+            },
         }
     }
 
