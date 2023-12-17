@@ -44,7 +44,7 @@ pub fn main() void {
             },
             Ops.pow => {
                 current_value *= current_value;
-            }
+            },
         }
 
         std.debug.print("{} ", .{current_value});
