@@ -136,14 +136,16 @@ pub fn main() void {
 // But a change after Zig 0.10.0 added the source file name to the
 // type. "Narcissus" became "065_builtins2.Narcissus".
 //
-// To fix this, I've added this function to strip the filename from
-// the front of the type name in the dumbest way possible. (It returns
-// a slice of the type name starting at character 14 (assuming
-// single-byte characters).
+// To fix this, we've added this function to strip the filename from
+// the front of the type name. (It returns a slice of the type name
+// starting at the index + 1 of character ".")
 //
 // We'll be seeing @typeName again in Exercise 070. For now, you can
 // see that it takes a Type and returns a u8 "string".
 fn maximumNarcissism(myType: anytype) []const u8 {
-    // Turn '065_builtins2.Narcissus' into 'Narcissus'
-    return @typeName(myType)[14..];
+    const indexOf = @import("std").mem.indexOf;
+
+    // Turn "065_builtins2.Narcissus" into "Narcissus"
+    const name = @typeName(myType);
+    return name[indexOf(u8, name, ".").? + 1 ..];
 }
