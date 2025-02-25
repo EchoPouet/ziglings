@@ -51,14 +51,14 @@ $ zig version
 Clone this repository with Git:
 
 ```
-$ git clone https://ziglings.org
-$ cd ziglings.org
+git clone https://codeberg.org/ziglings/exercises.git ziglings
+cd ziglings
 ```
 
 Then run `zig build` and follow the instructions to begin!
 
 ```
-$ zig build
+zig build
 ```
 
 Note: The output of Ziglings is the unaltered output from the Zig
@@ -171,6 +171,11 @@ zig build -Dn=19 -l
   uninstall        Uninstall 019_functions2.zig from prefix path
   test             Run 019_functions2.zig without checking output
   ...
+```
+
+To reset the progress (have it run all the exercises that have already been completed):
+```
+zig build -Dreset
 ```
 
 ## What's Covered
