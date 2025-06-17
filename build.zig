@@ -200,7 +200,7 @@ pub fn build(b: *Build) !void {
 
     if (rand) |_| {
         // Random build mode: verifies one random exercise.
-        // like for 'exno' but chooses a random exersise number.
+        // like for 'exno' but chooses a random exercise number.
         print("work in progress: check a random exercise\n", .{});
 
         var prng = std.Random.DefaultPrng.init(blk: {
@@ -963,7 +963,7 @@ const exercises = [_]Exercise{
     },
     .{
         .main_file = "060_floats.zig",
-        .output = "Shuttle liftoff weight: 2032kg",
+        .output = "Shuttle liftoff weight: 2032 metric tons",
     },
     .{
         .main_file = "061_coercions.zig",
@@ -1146,7 +1146,7 @@ const exercises = [_]Exercise{
     },
     .{
         .main_file = "097_bit_manipulation.zig",
-        .output = "x = 0; y = 1",
+        .output = "x = 1011; y = 1101",
     },
     .{
         .main_file = "098_bit_manipulation2.zig",
